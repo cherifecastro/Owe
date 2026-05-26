@@ -781,7 +781,7 @@ async function renderReceiptCanvas(){
   const descLines=wrapCanvasText(probe,receipt.description,inner);
   const noteLines=receipt.notes?wrapCanvasText(probe,'NOTE: '+receipt.notes,inner):[];
   const rows=receiptRows(receipt);
-  const height=420+(nameLines.length+descLines.length+noteLines.length)*30+rows.length*38;
+  const height=560+(nameLines.length+descLines.length+noteLines.length)*30+rows.length*38;
   const canvas=document.createElement('canvas');
   canvas.width=width*scale;
   canvas.height=height*scale;
@@ -831,6 +831,7 @@ async function renderReceiptCanvas(){
       return;
     }
     if(label==='PAYMENT HISTORY'){
+      ctx.textAlign='left';
       ctx.fillStyle='#7aa3c4';
       ctx.font='16px "IBM Plex Mono", monospace';
       ctx.fillText(label,pad,y);
