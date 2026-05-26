@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "owe",
+  "compatibility_date": "2026-05-26",
+  "pages_build_output_dir": "./public",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "owe-db",
+      "database_id": "1fb1634a-56b8-4617-a482-0076dab986d0",
+      "migrations_dir": "./migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
